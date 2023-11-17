@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct TabBarApp: App {
+    // selectedTab'i tanımla ve @State olarak işaretle
+    @State private var selectedTab: String = "Home"
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            // TabBar2DemoView'e selectedTab'i geçir
+            ContentView(selectedTab: $selectedTab)
         }
     }
 }
+
